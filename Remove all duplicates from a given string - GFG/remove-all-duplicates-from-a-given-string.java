@@ -30,17 +30,18 @@ public class Main {
 class Solution {
     String removeDuplicates(String str) {
         // code here
-        String s = "";
-        LinkedHashSet<Character> hs = new LinkedHashSet<>();
-        for(int i =0; i<str.length(); i++){
+        LinkedHashSet<Character> set = new LinkedHashSet<>();
+        StringBuilder sb = new StringBuilder("");
+        
+        for(int  i=0; i<str.length(); i++){
             char ch = str.charAt(i);
             
-            hs.add(ch);
+            set.add(ch);
         }
-        for(char x : hs){
-            s += x;
-        }
-        return s;
+        for(char ch : set)
+        sb.append(ch);
+        
+        return sb.toString();
     }
 }
 
