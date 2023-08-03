@@ -8,7 +8,10 @@ class Solution {
         for(int i =1; i<prices.length; i++){
             cost = prices[i] - min;
             profit = Integer.max(profit,cost);
-            min = Integer.min(min,prices[i]);
+            min = Integer.min(prices[i],min);
+            
+           
+            
 
         }
         return profit;
