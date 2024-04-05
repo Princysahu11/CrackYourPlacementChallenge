@@ -1,23 +1,17 @@
 class Solution {
     public int maxProfit(int[] arr) {
-
-        int currmax = arr[0];
-        int maxprofit =0;
+        
+        int currProfit = arr[0];
+        int maxProfit =0;
         for(int i =0; i<arr.length; i++){
-            currmax = Math.min(arr[i],currmax);
-            int profit = arr[i] - currmax;
-            maxprofit = Math.max(profit , maxprofit);
-
+            currProfit = Math.min(currProfit,arr[i]);
+            int Profit = arr[i] - currProfit;
+            maxProfit = Math.max(Profit,maxProfit);
         }
         
+
         
-        
-        
-        
-        
-        
-        
-     return maxprofit;   
+     return maxProfit;   
         
     }
 }
